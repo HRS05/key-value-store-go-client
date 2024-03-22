@@ -1,0 +1,6 @@
+  protoc -I./keyvaluestore        \
+  --go_out=./server      \
+  --go-grpc_out=require_unimplemented_servers=false:./server \
+  --go_out=./client      \
+  --go-grpc_out=require_unimplemented_servers=false:./client \
+  keyvaluestore/common.proto
